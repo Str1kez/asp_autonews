@@ -1,4 +1,4 @@
- using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
@@ -8,7 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
- using Microsoft.AspNetCore.Mvc;
+using asp_autonews.Article;
+using Microsoft.AspNetCore.Mvc;
 
  namespace asp_autonews
 {
@@ -24,6 +25,7 @@ using System.Threading.Tasks;
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Configuration.Bind("Project", new Config());
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
         }
 
