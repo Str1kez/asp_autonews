@@ -1,4 +1,5 @@
-﻿<meta charset="utf-8">
+﻿@using asp_autonews.Article
+<meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 @if (ViewBag.Title != null)
 {
@@ -6,7 +7,7 @@
 }
 else
 {
-    <title>Auto News</title>
+    <title>@Config.SiteName</title>
 }
 @if (ViewBag.Description != null)
 {

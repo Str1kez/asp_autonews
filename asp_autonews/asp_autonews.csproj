@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\" />
-    <Folder Include="Domain\" />
   </ItemGroup>
 
   <ItemGroup>
