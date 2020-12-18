@@ -19,6 +19,8 @@ namespace asp_autonews.Domain
         // создаем по умолчанию админа
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+            
             modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
             {
                 Id = "A6B112B3-2D1F-4338-A99B-FAED9C47B7AD",
@@ -43,7 +45,27 @@ namespace asp_autonews.Domain
                 RoleId = "A6B112B3-2D1F-4338-A99B-FAED9C47B7AD",
                 UserId = "4E3F1DE6-D027-4A7E-BC33-102C23E14970"
             });
-        }
 
+            modelBuilder.Entity<InfoField>().HasData(new InfoField
+            {
+                Id = new Guid("399F4583-55C0-483F-BCEC-E856F7A369DF"),
+                Key = "Index",
+                Title = "Главная",
+            });
+            
+            modelBuilder.Entity<InfoField>().HasData(new InfoField
+            {
+                Id = new Guid("E608A37B-88F6-4D46-9FAA-F43E1D031782"),
+                Key = "Articles",
+                Title = "Новости",
+            });
+            
+            modelBuilder.Entity<InfoField>().HasData(new InfoField
+            {
+                Id = new Guid("239C63ED-9DA2-439B-9C45-ACB774DAFA54"),
+                Key = "Contacts",
+                Title = "Контакты",
+            });
+        }
     }
 }
