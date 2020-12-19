@@ -14,7 +14,8 @@ namespace asp_autonews.Domain.Entities
         [Display(Name = "Загловок")]
         public override string Title { get; set; } = "Страница с информацией о сайте";
 
-        [Display(Name = "Текст")] public override string Text { get; set; } = "Ведите себя хорошо!";
+        [Display(Name = "Текст")]
+        public override string Text { get; set; } = "Ведите себя хорошо!";
 
     }
 }

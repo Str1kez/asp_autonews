@@ -1354,6 +1354,18 @@ button.btn:hover {
     color: #ffffff;
 }
 
+
+.auth-model label{
+    padding: 0 15px;
+    display: block;
+    text-align: left;
+}
+
+.auth-model input{
+    margin-bottom: 10px;
+}
+
+
 @media (max-width: 768.98px) {
     .footer-bottom .copyright,
     .footer-bottom .template-by {

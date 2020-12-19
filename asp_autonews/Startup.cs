@@ -65,6 +65,19 @@ namespace asp_autonews
                 options.AccessDeniedPath = "/account/accessdenied";
                 options.SlidingExpiration = true;
             });
+            
+            // настройка политики авторизации для админа
+            services.AddAuthorization(u =>
+            {
+                u.AddPolicy("AdminArea", policy => { policy.RequireRole("admin"); });
+            });
+            
+            // настройка сервисов для контроллеров
+            services.AddControllersWithViews(u =>
+            {
+                u.Conventions.Add(new AdminAreaAuth("Admin", "AdminArea"));
+            });
+
         }
         
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -94,6 +107,10 @@ namespace asp_autonews
             
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                "admin",
+                "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
