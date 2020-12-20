@@ -1354,7 +1354,6 @@ button.btn:hover {
     color: #ffffff;
 }
 
-
 .auth-model label{
     padding: 0 15px;
     display: block;
@@ -1365,6 +1364,10 @@ button.btn:hover {
     margin-bottom: 10px;
 }
 
+.auth-model a{
+    display: block;
+    margin-bottom: 20px;
+}
 
 @media (max-width: 768.98px) {
     .footer-bottom .copyright,

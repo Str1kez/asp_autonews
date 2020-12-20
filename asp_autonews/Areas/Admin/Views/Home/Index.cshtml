@@ -32,13 +32,13 @@
             </div>
         }
     </div>
-    <div class="div-box">
+    <div class="auth-model">
         <h3>Редактировать страницы сайта</h3>
-        <a asp-area="Admin" asp-controller="InfoFields" asp-action="Edit" asp-route-Key="PageIndex">Главная</a>
-        <a asp-area="Admin" asp-controller="InfoFields" asp-action="Edit" asp-route-Key="PageServices">Статьи</a>
-        <a asp-area="Admin" asp-controller="InfoFields" asp-action="Edit" asp-route-Key="PageContacts">Контакты</a>
+        <a asp-area="Admin" asp-controller="InfoFields" asp-action="Edit" asp-route-Key="Index">Главная</a>
+        <a asp-area="Admin" asp-controller="InfoFields" asp-action="Edit" asp-route-Key="Articles">Статьи</a>
+        <a asp-area="Admin" asp-controller="InfoFields" asp-action="Edit" asp-route-Key="Contacts">Контакты</a>
     </div>
-    <div class="div-box">
+    <div class="auth-model">
         <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
             <input type="submit" value="Выйти" />
         </form>
