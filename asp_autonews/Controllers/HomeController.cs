@@ -6,32 +6,28 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using asp_autonews.Domain;
 
 namespace asp_autonews.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly Manager dataManager;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(Manager dataManager)
         {
-            _logger = logger;
+            this.dataManager = dataManager;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(dataManager.InfoFields.GetInfoFieldByKey("Index"));
         }
 
-        public IActionResult Privacy()
+        public IActionResult Contacts()
         {
-            return View();
+            return View(dataManager.InfoFields.GetInfoFieldByKey("Contacts"));
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        
     }
 }

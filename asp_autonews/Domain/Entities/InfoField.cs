@@ -11,7 +11,7 @@ namespace asp_autonews.Domain.Entities
         [Required]
         public string Key { get; set; }
 
-        [Display(Name = "Загловок")]
+        [Display(Name = "Заголовок")]
         public override string Title { get; set; } = "Страница с информацией о сайте";
 
         [Display(Name = "Текст")]

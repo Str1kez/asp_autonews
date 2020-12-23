@@ -1,0 +1,28 @@
+﻿@using asp_autonews.Domain.Entities
+@model IQueryable<Article>
+@{
+    InfoField newsField = ViewBag.InfoField;
+    
+    ViewBag.Title = newsField.MetaTitle;
+    ViewBag.Description = newsField.MetaDescription;
+    ViewBag.Keywords = newsField.MetaKeywords;
+}
+
+<div>
+    @if (Model.Any())
+    {
+        // если есть новости
+        <ul>
+            @foreach (Article entity in Model)
+            {
+                <li>
+                    <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
+                        <img class="image-article" src="~/img/@entity.Image" alt="Картинка не загрузилась :(" />
+                    </a>
+                    <h4>@entity.Title</h4>
+                    <p>@entity.Subtitle</p>
+                </li>
+            }
+        </ul>
+    }
+</div>

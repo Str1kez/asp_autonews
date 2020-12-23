@@ -6,6 +6,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     background: #ffffff;
+    height: 100%;
+}
+
+html{
+    height: 100%;
 }
 
 a {
@@ -89,6 +94,14 @@ h6 {
 .custom-select:focus {
     box-shadow: none;
     border-color: #FF6F61;
+}
+
+.container{
+    margin: 0 10%;
+}
+
+.image-article{
+    max-width: 700px;
 }
 
 .custom-radio,
@@ -380,6 +393,7 @@ button.btn:hover {
     position: relative;
     width: 100%;
     padding: 30px 0 0 0;
+    height: 100%;
 }
 
 .top-news .tn-img {
