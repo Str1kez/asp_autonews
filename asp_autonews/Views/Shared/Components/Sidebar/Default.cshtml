@@ -1,13 +1,15 @@
 ﻿@using asp_autonews.Domain.Entities
+@using Microsoft.AspNetCore.Server.Kestrel.Core
 @model IQueryable<asp_autonews.Domain.Entities.Article>
 @if (Model?.Any() == true)
 {// если есть новости
-    <ul>
+    <h2>Новости</h2>
+    <ul class="sidebar-list">
     @foreach (Article entity in Model)
     {
-        <li>
+        <li class="list-articles">
             <a asp-area="" asp-controller="Articles" asp-action="Index" asp-route-id="@entity.Id">
-                <img class="image-article" src="~/img/@entity.Image" alt="Картинка не загрузилась :(" />
+                <img class="sidebar-image" src="~/img/@entity.Image" alt="Картинка не загрузилась :(" />
             </a>
             <h4>@entity.Title</h4>
             <p>@entity.Subtitle</p>

@@ -8,10 +8,11 @@
 <div>
     <h1>@Model.Title</h1>
     <h2>@Model.Subtitle</h2>
-    <div >
-        <img  src="~/img/@Model.Image" alt="Картинка не загрузилась :(">
+    <div>
+        <img  src="~/img/@Model.Image" alt="Картинка не загрузилась :(" class="image-article">
     </div>
 </div>
+<br>
 <div>
     @Html.Raw(Model.Text)
 </div>

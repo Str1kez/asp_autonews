@@ -12,11 +12,12 @@
     <div class="top-news">
         <div class="container">
             <div class="row">
-                <div style="width: 60%">
+                <div style="width: 60%; min-height: 800px">
                     @RenderBody()
                 </div>
+                @await Html.PartialAsync("SidebarPartial")
             </div>
-            @await Html.PartialAsync("SidebarPartial")
+
         </div>
 </div>
     <!-- Top News End-->

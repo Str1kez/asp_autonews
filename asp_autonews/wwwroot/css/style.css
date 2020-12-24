@@ -97,11 +97,51 @@ h6 {
 }
 
 .container{
-    margin: 0 10%;
+    margin: auto;
+    padding: 0;
+    border: none;
+    width: 100%;
+}
+
+.list-articles{
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-articles:hover{
+    filter: drop-shadow(3px 3px 2px black);
+    -webkit-filter: drop-shadow(3px 3px 2px black);
+    margin-bottom: 2px;
 }
 
 .image-article{
-    max-width: 700px;
+    max-width: 100%;
+}
+
+.sidebar{
+    max-width: 30%;
+    padding: 0;
+    display: block;
+}
+
+.sidebar-list{
+    padding: 0;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sidebar-image{
+    max-width: 70%;
+}
+
+.sidebar-image:hover{
+    filter: drop-shadow(5px 5px 3px black);
+    -webkit-filter: drop-shadow(5px 5px 3px black);
+    margin-bottom: 2px;
 }
 
 .custom-radio,
@@ -392,8 +432,8 @@ button.btn:hover {
 .top-news {
     position: relative;
     width: 100%;
-    padding: 30px 0 0 0;
-    height: 100%;
+    padding: 30px 30px 0 0;
+    height: initial;
 }
 
 .top-news .tn-img {
@@ -1339,7 +1379,7 @@ button.btn:hover {
 /**********************************/
 .footer-bottom {
     position: relative;
-    padding: 25px 0;
+    padding: 0 0;
     background: #000000;
 }
 
